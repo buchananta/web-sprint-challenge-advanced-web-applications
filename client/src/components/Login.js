@@ -14,13 +14,14 @@ const Login = () => {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
   const [credentials, setCredentials] = useState(initCredentials);
-
+  const history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
     axiosWithAuth().post('/api/login', credentials) 
       .then((res)=> {
         console.log(res)
         localStorage.setItem('token', res.data.payload)
+        history.push('/bubbles');
       })
       .catch((e) => console.log(e))
   }
