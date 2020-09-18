@@ -20,7 +20,8 @@ const Login = () => {
     axiosWithAuth().post('/api/login', credentials) 
       .then((res)=> {
         console.log(res)
-        localStorage.setItem('token', res.data.payload)
+        localStorage.setItem('token', res.data.payload);
+        console.log(localStorage.getItem('token'));
         history.push('/bubbles');
       })
       .catch((e) => console.log(e))

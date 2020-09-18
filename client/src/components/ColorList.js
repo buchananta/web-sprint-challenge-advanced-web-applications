@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axiosWithAuth from "../utils/axiosWIthAuth";
 
 const initialColor = {
@@ -14,7 +14,7 @@ const ColorList = ({ colors, updateColors }) => {
     setEditing(true);
     setColorToEdit(color);
   };
-
+  
   const saveEdit = e => {
     e.preventDefault();
     // Make a put request to save your updated color
