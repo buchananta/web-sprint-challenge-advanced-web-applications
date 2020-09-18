@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-import axiosWithAuth from '../utils/axiosWIthAuth';
+import axiosWithAuth from '../utils/axiosWithAuth';
 // I have to brag a little bit..
 // just wrote this entire component (minus the history.push line)
 // in one go, and it all worked :D
